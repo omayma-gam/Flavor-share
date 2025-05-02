@@ -1,0 +1,40 @@
+{
+  "recipe": [
+    {
+      "id": "7242",
+      "nom": "summer-desserts",
+      "ingredients": "Fraises  Framboises  Myrtilles (bleuets)  Mûres  Pêches  Abricots  Melon  Pastèque  Mangue  Ananas  Kiwi  Citron / citron vert",
+      "etapes": "eatp1-etap2-etape3-etape4-etape6",
+      "img": "https://cdn.loveandlemons.com/wp-content/uploads/2021/06/summer-desserts.jpg",
+      "categorie": "Dessert",
+      "data": "2025-05-01T18:34:59.711Z"
+    },
+    {
+      "id": "3430",
+      "nom": "Pizza",
+      "ingredients": "Farine (type 00 ou farine classique)  Levure boulangère (fraîche ou sèche)  Eau tiède  Sel  Huile d’olive  Sucre (facultatif, pour activer la levure)",
+      "etapes": "eatp1-etap2-etape3-etape4-etape6",
+      "img": "https://cdn.britannica.com/08/177308-050-94D9D6BE/Food-Pizza-Basil-Tomato.jpg",
+      "categorie": "Plat principal",
+      "data": "2025-05-01T21:45:48.128Z"
+    },
+    {
+      "id": "f530",
+      "nom": "Aubergines et patates",
+      "ingredients": "1 aubergine (250g)  1 patate douce (500g)  120 g de quinoa sec  18 cl de bouillon de légumes  1 petit oignon rouge  2 gousses d'ail  1 cm de gingembre  5 cuillères à soupe d'huile d’olive  Sel, poivre fraîchement moulu",
+      "etapes": "eatp1-etap2-etape3-etape4-etape6",
+      "img": "https://images.prismic.io/emile-henry/Z3-K5JbqstJ99NPO_EH_8441_Amb_PetitPlat_Papillote_OvenDish_EggPlant_SweetPotato_Quinoa_Pomegrenade_A.jpg?auto=format,compress&rect=0,516,3000,1969&w=960&h=630",
+      "categorie": "Entrée",
+      "data": "2025-05-01T21:49:13.920Z"
+    },
+    {
+      "id": "796a",
+      "nom": "Soupe minestrone protéinée",
+      "ingredients": "0ml (2 c. à soupe) d’huile d’olive 1 oignon haché finement 15ml (1 c. à soupe) de chaque: basilic, origan, thym 200g (1/2 lb) de bœuf (surlonge) ou poitrines de poulet désossées coupés en petits cubes 1,5L (6 tasses) de bouillon de poulet ou de légumes 1 conserve de 540ml (19oz) d’haricots rouges, égouttés et rincés 1 conserve de 796ml (28oz) de tomates en dés 250ml (1 tasse) de pâtes non cuites, macaronis, rotinis ou farfalles (blé entier, si possible) 250ml (1 tasse) de fèves vertes coupées en 2 sur la largeur 250ml (1 tasse) de carottes en dés",
+      "etapes": "eatp1-etap2-etape3-etape4-etape6",
+      "img": "https://www.vivai.ca/app/uploads/2021/01/soupe-minestrone-riche-en-proteines-photo-scaled.jpg",
+      "categorie": "Soupe",
+      "data": "2025-05-01T21:51:44.039Z"
+    }
+  ]
+}

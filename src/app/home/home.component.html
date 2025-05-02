@@ -1,0 +1,35 @@
+<section class="theSection" >
+    <div class="aprocontent">
+        <h1>à propos de nous</h1>
+        <p class="apro">Bienvenue sur notre blog ! Ici, nous partageons avec passion des articles inspirants, des astuces utiles et des découvertes uniques autour de nos centres d'intérêt. Notre mission est de créer un espace chaleureux où chacun peut apprendre, échanger et s'inspirer. Merci de faire partie de cette aventure !</p>
+    </div>
+    <div>
+        <h1>Recette récents</h1>
+    </div>
+  <div class="articles-list">
+    <article class="article-item" *ngFor="let recet of Recette | slice:0:3 ">
+        <ng-component *ngIf="(!selectCategories||recet.Categorie===selectCategories)&&(!searchByTitle||recet.Nom.toLowerCase().includes(searchByTitle.toLocaleLowerCase()))">
+            <img [src]="recet.img" class="article-image">
+            <div class="article-content">
+                <h2 class="article-title">{{recet.Nom}}</h2>
+          
+          
+            <p class="article-excerpt">
+            {{recet.ingredients}}
+           </p>
+           <p class="article-excerpt">
+            {{recet.etapes}}
+           </p>
+           
+         <div class="article-footer">
+
+            <span class="article-category">{{recet.Categorie}}</span>
+         </div>  
+            </div>
+        
+        
+        </ng-component>
+    </article>
+  </div>
+
+</section>
