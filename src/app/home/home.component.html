@@ -1,35 +1,33 @@
-<section class="theSection" >
-    <div class="aprocontent">
-        <h1>à propos de nous</h1>
-        <p class="apro">Bienvenue sur notre blog ! Ici, nous partageons avec passion des articles inspirants, des astuces utiles et des découvertes uniques autour de nos centres d'intérêt. Notre mission est de créer un espace chaleureux où chacun peut apprendre, échanger et s'inspirer. Merci de faire partie de cette aventure !</p>
+<nav class="navbar navbar-expand-lg" style="background-color: #FF6B6B;">
+    <div class="container-fluid">
+      <!-- Logo et nom du site alignés à gauche -->
+      <div class="d-flex align-items-center">
+        <a class="navbar-brand text-light" href="/home">
+          <i class="bi bi-egg-fried me-2" style="font-size: 1.8rem;"></i>
+          <span class="fw-bold">FlavorShare</span>
+        </a>
+      </div>
+  
+      <!-- Bouton toggler pour mobile -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <!-- Liens de navigation alignés à droite -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link text-light px-3" routerLink="/home" routerLinkActive="active">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light px-3" routerLink="/recipe-list" routerLinkActive="active">Recipe List</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light px-3" routerLink="/form" routerLinkActive="active">Recipe Form</a>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div>
-        <h1>Recette récents</h1>
-    </div>
-  <div class="articles-list">
-    <article class="article-item" *ngFor="let recet of Recette | slice:0:3 ">
-        <ng-component *ngIf="(!selectCategories||recet.Categorie===selectCategories)&&(!searchByTitle||recet.Nom.toLowerCase().includes(searchByTitle.toLocaleLowerCase()))">
-            <img [src]="recet.img" class="article-image">
-            <div class="article-content">
-                <h2 class="article-title">{{recet.Nom}}</h2>
-          
-          
-            <p class="article-excerpt">
-            {{recet.ingredients}}
-           </p>
-           <p class="article-excerpt">
-            {{recet.etapes}}
-           </p>
-           
-         <div class="article-footer">
-
-            <span class="article-category">{{recet.Categorie}}</span>
-         </div>  
-            </div>
-        
-        
-        </ng-component>
-    </article>
-  </div>
-
-</section>
+  </nav>

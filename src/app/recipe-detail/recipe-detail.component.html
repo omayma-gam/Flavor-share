@@ -1,26 +1,33 @@
-<p>recipe-detail works!</p>
-
 <div class="posts-grid">
-  <article class="post-card" >
-
-    <img [src]="recipeDetails.img">
-
+  <article class="post-card">
+    <img [src]="recipeDetails.img" class="recipe-image" alt="{{recipeDetails.nom}}">
+    
     <div class="post-content">
-      <h2 class="post-title"> {{recipeDetails.nom}}</h2>
+      <div class="tag">{{recipeDetails.categorie}}</div>
+      
+      <h2 class="post-title">{{recipeDetails.nom}}</h2>
+      
       <div class="post-meta">
-        <span>{{recipeDetails.ingredients}}</span>
+        <span class="ingredients-label">Ingrédients :</span>
+        <ul class="ingredients-list">
+          <li *ngFor="let ingredient of recipeDetails.ingredients.split('\n')">
+            {{ingredient}}
+          </li>
+        </ul>
       </div>
-      <p class="post-excerpt">
-        {{recipeDetails.etapes}}
-      </p>
-      <div>
-        <span class="tag">{{recipeDetails.categorie}}</span>
+      
+      <div class="post-excerpt">
+        <h3>Préparation :</h3>
+        <ol class="steps-list">
+          <li *ngFor="let step of recipeDetails.etapes.split('\n')">
+            {{step}}
+          </li>
+        </ol>
       </div>
-    <div>
-      <p><b>Date : </b>{{recipeDetails.data}}</p>
+      
+      <div class="recipe-footer">
+        <span class="date"><i class="bi bi-calendar"></i> {{recipeDetails.data | date:'dd/MM/yyyy'}}</span>
+      </div>
     </div>
-    </div>
-
   </article>
-
 </div>

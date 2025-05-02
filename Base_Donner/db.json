@@ -10,15 +10,6 @@
       "data": "2025-05-01T18:34:59.711Z"
     },
     {
-      "id": "3430",
-      "nom": "Pizza",
-      "ingredients": "Farine (type 00 ou farine classique)  Levure boulangère (fraîche ou sèche)  Eau tiède  Sel  Huile d’olive  Sucre (facultatif, pour activer la levure)",
-      "etapes": "eatp1-etap2-etape3-etape4-etape6",
-      "img": "https://cdn.britannica.com/08/177308-050-94D9D6BE/Food-Pizza-Basil-Tomato.jpg",
-      "categorie": "Plat principal",
-      "data": "2025-05-01T21:45:48.128Z"
-    },
-    {
       "id": "f530",
       "nom": "Aubergines et patates",
       "ingredients": "1 aubergine (250g)  1 patate douce (500g)  120 g de quinoa sec  18 cl de bouillon de légumes  1 petit oignon rouge  2 gousses d'ail  1 cm de gingembre  5 cuillères à soupe d'huile d’olive  Sel, poivre fraîchement moulu",

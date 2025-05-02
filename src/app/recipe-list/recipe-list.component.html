@@ -1,34 +1,81 @@
 <div class="container my-4">
-  <div class="d-flex justify-content-center align-items-center mb-3">
-    <label class="form-label me-2 mb-0"><strong>Rechercher :</strong></label>
-    <input type="search" [(ngModel)]="rechercherRecipe" placeholder="Rechercher une recette" class="form-control w-auto">
+  <!-- Section Recherche - Centrée avec meilleure hiérarchie -->
+  <div class="d-flex justify-content-center align-items-center mb-4 p-3 bg-light rounded-3 shadow-sm">
+    <div class="input-group" style="max-width: 500px;">
+      <span class="input-group-text bg-warning text-dark">
+        <i class="bi bi-search"></i>
+      </span>
+      <input type="search" 
+             [(ngModel)]="rechercherRecipe" 
+             placeholder="Rechercher une recette..." 
+             class="form-control border-warning"
+             aria-label="Rechercher">
+    </div>
   </div>
-  <div class="d-flex justify-content-between mb-3 ">
-    <button (click)="selectionParcategorie='Entrée'" class="btn btn-warning">Entrée</button> <button (click)="selectionParcategorie='Plat principal'" class="btn btn-warning">Plat principal</button>
-    <button (click)="selectionParcategorie='Dessert'" class="btn btn-warning">Dessert</button> <button (click)="selectionParcategorie='Soupe'" class="btn btn-warning">Soupe </button>
-    <button (click)="selectionParcategorie='Salade'" class="btn btn-warning">Salade</button> <button (click)="selectionParcategorie=''" class="btn btn-dark">Toute</button>
-  </div>
-  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
 
-    <div class="col" *ngFor="let recipes of recipesList">
-      <div class="card h-100" *ngIf="(!selectionParcategorie || recipes.categorie == selectionParcategorie) && (!rechercherRecipe || recipes.nom.toLowerCase().includes(rechercherRecipe.toLowerCase()))">
-        <img [src]="recipes.img" class="card-img-top" alt="Recipe image" style="height: 200px; object-fit: cover;">
+  <!-- Filtres par catégorie - Design plus cohérent -->
+  <div class="d-flex flex-wrap justify-content-center gap-2 mb-4">
+    <button *ngFor="let cat of ['Entrée', 'Plat principal', 'Dessert', 'Soupe', 'Salade']"
+            (click)="selectionParcategorie = cat"
+            class="btn btn-outline-warning"
+            [class.active]="selectionParcategorie === cat">
+      {{ cat }}
+    </button>
+    <button (click)="selectionParcategorie = ''" 
+            class="btn btn-dark"
+            [class.active]="!selectionParcategorie">
+      Toutes
+    </button>
+  </div>
+
+  <!-- Grille de recettes - Card améliorées -->
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+    <div class="col" *ngFor="let recipe of recipesList">
+      <div class="card h-100 border-0 shadow-sm hover-shadow transition-all" 
+           *ngIf="(!selectionParcategorie || recipe.categorie == selectionParcategorie) && 
+                 (!rechercherRecipe || recipe.nom.toLowerCase().includes(rechercherRecipe.toLowerCase()))">
+        
+        <!-- Image avec overlay de catégorie -->
+        <div class="position-relative">
+          <img [src]="recipe.img" 
+               class="card-img-top" 
+               alt="{{ recipe.nom }}"
+               style="height: 200px; object-fit: cover;">
+          <span class="position-absolute top-0 end-0 bg-warning text-dark px-2 py-1 m-2 rounded-pill small">
+            {{ recipe.categorie }}
+          </span>
+        </div>
+
+        <!-- Corps de la carte -->
         <div class="card-body d-flex flex-column">
-          <h5 class="card-title">{{ recipes.nom }}</h5>
-          <p class="card-text ING"><b>Ingrédients :</b> <br>{{ recipes.ingredients }}</p>
-          <p><b>Étapes :</b> {{ recipes.etapes }}</p>
-          <p><b>Catégorie :</b> <span>{{ recipes.categorie }}</span></p>
-          <p><b>Date :</b> {{ recipes.data | date}}</p>
-          <div class="mt-auto d-flex justify-content-between">
-            <button (click)="deleteRecipe(recipes.id)" class="btn btn-danger">
-              <i class="bi bi-trash3"></i>
+          <h5 class="card-title text-truncate">{{ recipe.nom }}</h5>
+          
+          <div class="card-text mb-2">
+            <p class="text-muted small mb-1">
+              <i class="bi bi-calendar me-1"></i>
+              {{ recipe.data | date:'mediumDate' }}
+            </p>
+            <div class="d-flex align-items-center mb-2">
+              <i class="bi bi-clock me-1 text-muted"></i>
+              <small class="text-muted">30 min</small> <!-- Ajoutez le temps si disponible -->
+            </div>
+          </div>
+
+          <!-- Boutons d'action -->
+          <div class="mt-auto d-flex justify-content-between pt-3 border-top">
+            <button (click)="deleteRecipe(recipe.id)" 
+                    class="btn btn-sm btn-outline-danger"
+                    title="Supprimer">
+              <i class="bi bi-trash3"></i> Supprimer
             </button>
-            <button [routerLink]="['/recipe-detail',recipes.id]" class="btn btn-primary">
-              <i class="bi bi-eyeglasses"></i>
+            <button [routerLink]="['/recipe-detail', recipe.id]" 
+                    class="btn btn-sm btn-warning text-dark"
+                    title="Voir détails">
+              <i class="bi bi-eye-fill"></i> Détails
             </button>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+</div>²

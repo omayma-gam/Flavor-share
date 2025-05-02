@@ -1,0 +1,128 @@
+/* Structure de base */
+.posts-grid {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .post-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .post-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Image */
+  .recipe-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+  }
+  
+  /* Contenu */
+  .post-content {
+    padding: 25px;
+  }
+  
+  .tag {
+    display: inline-block;
+    background: #FF9F43;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+  
+  .post-title {
+    color: #333;
+    font-size: 28px;
+    margin: 0 0 20px;
+    font-weight: 700;
+  }
+  
+  /* Ingrédients */
+  .ingredients-label {
+    display: block;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  
+  .ingredients-list {
+    padding-left: 20px;
+    margin-bottom: 25px;
+  }
+  
+  .ingredients-list li {
+    margin-bottom: 8px;
+    position: relative;
+    list-style-type: none;
+    padding-left: 25px;
+  }
+  
+  .ingredients-list li:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 8px;
+    height: 8px;
+    background: #FF9F43;
+    border-radius: 50%;
+  }
+  
+  /* Étapes de préparation */
+  .post-excerpt h3 {
+    color: #555;
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  
+  .steps-list {
+    padding-left: 20px;
+  }
+  
+  .steps-list li {
+    margin-bottom: 12px;
+    line-height: 1.6;
+    padding-left: 5px;
+  }
+  
+  /* Pied de page */
+  .recipe-footer {
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    color: #777;
+  }
+  
+  .date {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    .recipe-image {
+      height: 200px;
+    }
+    
+    .post-content {
+      padding: 20px;
+    }
+    
+    .post-title {
+      font-size: 24px;
+    }
+  }
