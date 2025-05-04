@@ -13,6 +13,7 @@ import { FormRecipeComponent } from './form-recipe/form-recipe.component';
 import { HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import {CommonModule} from '@angular/common';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import {CommonModule} from '@angular/common';
     LoginComponent,
     RatingSystemComponent,
     FormRecipeComponent,
+    FooterComponent,
 
   ],
   imports: [

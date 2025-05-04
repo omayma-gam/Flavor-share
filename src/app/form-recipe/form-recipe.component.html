@@ -4,13 +4,13 @@
     <form (ngSubmit)="ajouterRecipe()" class="recipe-form">
       <div class="form-group">
         <label class="form-label">Nom de la recette :</label>
-        <input [(ngModel)]="recipe.nom" class="form-input" type="text" name="nom" placeholder="Ex: Tajine de poulet">
+        <input [(ngModel)]="recipe.nom" class="form-input" type="text" name="nom" placeholder="Entrez le nom de la recette" required>
       </div>
 
       <div class="form-group">
         <label class="form-label">Ingrédients :</label>
         <textarea [(ngModel)]="recipe.ingredients" class="form-input" name="ingredients" rows="3" 
-                  placeholder="Listez les ingrédients (séparés par des virgules ou retours à la ligne)"></textarea>
+                  placeholder="Listez les ingrédients "></textarea>
       </div>
 
       <div class="form-group">

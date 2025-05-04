@@ -7,6 +7,7 @@ import {RecipeListComponent} from './recipe-list/recipe-list.component';
 import {FormRecipeComponent} from './form-recipe/form-recipe.component';
 import {RatingSystemComponent} from './rating-system/rating-system.component';
 import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
+import { FooterComponent } from './footer/footer.component';
 
 const routes: Routes = [
   {path : "login", component : LoginComponent},
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path : "recipe-list", component : RecipeListComponent},
   {path : "recipe-detail/:id", component : RecipeDetailComponent},
   {path : "rating", component : RatingSystemComponent},
+  {path:"footer",component:FooterComponent}
 ];
 
 @NgModule({
